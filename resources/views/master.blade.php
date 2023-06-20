@@ -56,6 +56,10 @@
         height: 200px!important;
         margin-top: 10%;
     }
+    .trending-item a {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Inherit the color from parent element */
+    }
 </style>
 
 </html>
