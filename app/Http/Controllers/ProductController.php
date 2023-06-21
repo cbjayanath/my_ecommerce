@@ -53,9 +53,15 @@ class ProductController extends Controller
          $products = DB::table('cart')
          ->join('products', 'cart.product_id', '=' , 'products.id')
          ->where('cart.user_id',$userId)
-         ->select('products.*')->get();
+         ->select('products.*' , 'cart.id as cartId')->get();
          return view('cartlist', ['products' => $products]);
         
+    }
+
+    function removeCart($id){
+        Cart::destroy($id);
+        return redirect('/cartlist');
+
     }
 
 }

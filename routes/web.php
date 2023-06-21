@@ -31,5 +31,6 @@ Route::get("/", [ProductController::class, 'index']);
 Route::get("/details/{id}", [ProductController::class, 'detail']);
 Route::post("/add_to_cart", [ProductController::class, 'addToCart'])->middleware('web');
 Route::get("/cartlist", [ProductController::class, 'cartList']);
+Route::get("/removecart/{id}", [ProductController::class, 'removeCart']);
 
  
