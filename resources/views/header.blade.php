@@ -29,6 +29,20 @@
       </form>
       <ul class="nav navbar-nav navbar-right" style="margin-left: 20px">
         <li><a class="nav-link" href="#">Cart({{ $total }})</a></li>
+        @if (Session::has('user'))
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            {{ Session::get('user')['name'] }}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+
+          </ul>
+        </li>
+        @else
+        <li><a class="nav-link" href="/login">Login</a></li>
+        @endif
       </ul>
     </div>
   </div>
