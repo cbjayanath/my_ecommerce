@@ -60,6 +60,20 @@
         text-decoration: none; /* Remove underline */
         color: inherit; /* Inherit the color from parent element */
     }
+    .cart-list-devider{
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+      
+       
+    }
+    .trending-wrapper{
+        margin: 30px;
+    }
+    .trending-image{
+        height: 100px;
+    }
+ 
 </style>
 
 </html>
